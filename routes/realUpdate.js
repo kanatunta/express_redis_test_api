@@ -7,7 +7,8 @@ const client = require("../client/client.js");
 router.post("/", function(request, response, next) {
   const id = request.body.id;
   client.hgetall(id, (err, obj) => {
-    return response.render("showInfo", { title: "Show info", user: obj });
+    obj.id = id;
+    return response.render("realUpdate", { title: "Real update", user: obj });
   });
 });
 

@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.main {  
+  height: 350px;
+  background-color: bisque;
+}
 a {
   color: #00b7ff;
 }
@@ -22,7 +26,7 @@ label {
   display: block;
   width: 10%;
 }
-a {
+a {  
   padding: 1px;
   text-decoration: none;
   color: white;
@@ -39,11 +43,11 @@ a:hover {
 }
 
 .viva-docker {
-  background-color: aqua;
+  background-color: darkgoldenrod;
   text-align: center;
 }
 
-.upper{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.upper {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
 }

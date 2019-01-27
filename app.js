@@ -14,6 +14,7 @@ const deleteInfoRouter = require("./routes/deleteInfo");
 const deleteInfoByIdRouter = require("./routes/deleteInfoById");
 const updateKanatuntaRouter = require('./routes/updateKanatunta');
 const updateKanatuntaInfoRouter = require('./routes/updateKanatuntaInfo');
+const realUpdateRouter = require('./routes/realUpdate');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use("/addInfo", addInfoRouter);
 app.use("/saveToRedis", saveToRedisRouter);
 app.use('/updateKanatunta',updateKanatuntaRouter);
 app.use('/updateKanatuntaInfo',updateKanatuntaInfoRouter);
+app.use('/realUpdate',realUpdateRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
