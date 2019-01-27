@@ -19,7 +19,7 @@ router.post("/", function(request, response, next) {
     "email",
     email,
     (err, obj) => {
-      return response.render("saveToRedis", { title: "Safe to redis" });
+      return response.render("updateKanatuntaInfo", { title: "Update to redis" });
     }
   );
 });

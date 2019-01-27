@@ -1,5 +1,5 @@
 <h1>{{title}}</h1>
-<form action="/saveToRedis" method="post">
+<form action="/updateKanatuntaInfo" method="post">
     <label for="id">Id:
         <input type="text" name="id" placeholder="id">
     </label>
@@ -18,3 +18,8 @@
 
     <input type="submit" value="Submit" />
 </form>
+<ul>First ten posibble updating candidates
+  {{#each this.kanatuntas as |key|}}
+    <li>Can be update <span class='zoom'>{{key}}</span></li>
+  {{/each}}
+</ul>
