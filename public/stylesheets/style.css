@@ -1,0 +1,41 @@
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.footer{
+color: darkblue;
+}
+
+h1{
+color: darkgoldenrod;
+}
+label{
+padding: 5px;
+color: darkgrey;
+font-style: italic;
+font-weight: bold;
+display: block;
+width: 10%;
+}
+a{
+padding: 1px;
+text-decoration: none;
+color: white;
+background-color: gray;
+}
+a:hover{
+background-color: black;
+}
+
+.zoom{
+magrin: 2px;
+background-color: darkgoldenrod;
+border-radius: 4px;
+}

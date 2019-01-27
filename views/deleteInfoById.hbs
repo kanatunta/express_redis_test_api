@@ -1,0 +1,17 @@
+<h1>Kanatuntas</h1>
+<form action="/deleteInfo" method="POST">
+<label name="id">Delete by Id: 
+<input name="id" type="text" placeholder="delete by id"/>
+</label>
+<input type="submit" value="Submit"/>
+</form>
+<br>
+<ul>First ten posibble deleting candidates
+  {{#each this.kanatuntas as |key|}}
+    <li>Can be deleted <span class='zoom'>{{key}}</span></li>
+  {{/each}}
+</ul>
+
+
+
+
