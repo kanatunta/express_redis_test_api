@@ -10,7 +10,9 @@ router.post("/", function(request, response, next) {
   const last_name = request.body.last_name;
   const email = request.body.email;
 
-  client.hmset(
+  client.lpush("users",id);
+
+  client.hmset(  
     id,
     "first_name",
     first_name,

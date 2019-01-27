@@ -4,9 +4,8 @@ const client = require("../client/client");
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  client.scan(10, (err, obj) => {
-    console.log(obj[1]);
-    res.render("searchById", { title: "Search By Id", kanatuntas: obj[1] });
+  client.lrange("users",0,10, (err, obj) => {   
+    res.render("searchById", { title: "Search By Id", kanatuntas: obj});
   });
 });
 

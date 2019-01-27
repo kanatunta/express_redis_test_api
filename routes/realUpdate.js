@@ -7,7 +7,13 @@ const client = require("../client/client.js");
 router.post("/", function(request, response, next) {
   const id = request.body.id;
   client.hgetall(id, (err, obj) => {
+    if (!obj) {
+      obj = { toAdd: true };
+    } else {
+      obj.toAdd = false;
+    }
     obj.id = id;
+    console.log(obj);
     return response.render("realUpdate", { title: "Real update", user: obj });
   });
 });

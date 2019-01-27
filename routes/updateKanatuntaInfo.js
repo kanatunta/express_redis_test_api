@@ -9,6 +9,12 @@ router.post("/", function(request, response, next) {
   const first_name = request.body.first_name;
   const last_name = request.body.last_name;
   const email = request.body.email;
+  const toAdd = request.body.toAdd;
+  console.log("req.body", request.body);
+
+  if (toAdd==='true') {
+    client.lpush("users", id);
+  }
 
   client.hmset(
     id,
@@ -19,7 +25,9 @@ router.post("/", function(request, response, next) {
     "email",
     email,
     (err, obj) => {
-      return response.render("updateKanatuntaInfo", { title: "Update to redis" });
+      return response.render("updateKanatuntaInfo", {
+        title: "Update to redis"
+      });
     }
   );
 });
