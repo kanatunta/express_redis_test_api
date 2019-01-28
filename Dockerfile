@@ -1,9 +1,17 @@
-FROM kanatunta/redisnodenginx:lates
+FROM node
 
-ENV PATH /root/.nvm/versions/node/v11.8.0/bin/:${PATH}
-ENV PATH /usr/local/bin/:${PATH}
+RUN wget http://download.redis.io/redis-stable.tar.gz && \
+    tar xvzf redis-stable.tar.gz && \
+    cd redis-stable && \
+    make && \
+    mv src/redis-server /usr/bin/ && \
+    cd .. && \
+    rm -r redis-stable && \
+    npm install -g concurrently  
 
-WORKDIR /usr/src/fromwin
+EXPOSE 6379
+
+WORKDIR /usr/src/fromlin
 
 COPY package*.json ./
 
@@ -14,7 +22,8 @@ COPY . .
 EXPOSE 3000
 EXPOSE 6379
 
-CMD redis-server --daemonize yes --bind 0.0.0.0; npm start
+CMD concurrently "/usr/bin/redis-server --bind '0.0.0.0'" "sleep 5s; npm start"
+
 
 
 
