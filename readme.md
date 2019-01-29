@@ -7,4 +7,4 @@
 * clone repo
 * install docker  
 * run from terminal:  
-  **docker run --rm -it -p 80:3000 kanatunta/myredis:lates**  
+  **docker run --rm -it -p 80:3000 kanatunta/myredis:latest**  
