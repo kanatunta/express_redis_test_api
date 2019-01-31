@@ -8,3 +8,12 @@
 * install docker  
 * run from terminal:  
   **docker run --rm -it -p 80:3000 kanatunta/myredis:latest**  
+
+3 To start without docker
+* install [**redis**](https://redis.io/) and run redis-server
+* git clone @repo
+* cd @project-dir
+* npm install
+* npm start
+* localhost:3000 and voala
+
