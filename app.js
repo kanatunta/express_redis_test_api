@@ -5,22 +5,16 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
-const addInfoRouter = require("./routes/addInfo");
-const showInfoByIdRouter = require("./routes/showInfoById");
-const searchByIdRouter = require("./routes/searchById");
-const about = require("./routes/about");
-const saveToRedisRouter = require("./routes/saveToRedis");
-const deleteInfoRouter = require("./routes/deleteInfo");
-const deleteInfoByIdRouter = require("./routes/deleteInfoById");
-const updateKanatuntaRouter = require('./routes/updateKanatunta');
-const updateKanatuntaInfoRouter = require('./routes/updateKanatuntaInfo');
-const realUpdateRouter = require('./routes/realUpdate');
+const addUserInfoRouter = require("./routes/addUserInfo");
+const userInfoRouter = require("./routes/userInfo");
+const updateUserInfoRouter = require("./routes/updateUserInfo");
+const deleteUserInfoRouter = require("./routes/deleteUserInfo");
 
 const app = express();
 
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "hbs");
+// // view engine setup
+// app.set("views", path.join(__dirname, "views"));
+// app.set("view engine", "hbs");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -28,17 +22,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+//set routes
 app.use("/", indexRouter);
-app.use("/about", about);
-app.use("/showInfoById", showInfoByIdRouter);
-app.use("/searchById", searchByIdRouter);
-app.use("/deleteInfo", deleteInfoRouter);
-app.use("/deleteInfoById", deleteInfoByIdRouter);
-app.use("/addInfo", addInfoRouter);
-app.use("/saveToRedis", saveToRedisRouter);
-app.use('/updateKanatunta',updateKanatuntaRouter);
-app.use('/updateKanatuntaInfo',updateKanatuntaInfoRouter);
-app.use('/realUpdate',realUpdateRouter);
+app.use("/userInfo", userInfoRouter);
+app.use("/addUserInfo", addUserInfoRouter);
+app.use("/updateUserInfo", updateUserInfoRouter);
+app.use("/deleteUserInfo", deleteUserInfoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
