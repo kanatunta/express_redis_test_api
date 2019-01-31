@@ -4,27 +4,29 @@
 
 ### From Docker repo
 
-1 docker pull @repo-name  
-2 docker run -d -p 80:3000 @repo-name  
-3 docker container rm @repo-name -f
+1 docker pull kanatunta/rest-redis:latest
+2 docker run -d -p 80:3000 kanatunta/rest-redis:latest  
+3 docker container rm kanatunta/rest-redis:latest -f // stop container and remove  
 
 ### From terminal
 
-1 install redis
-2 npm install
-3 npm run
+1 install [redis](https://redis.io/)  
+2 npm install  
+3 npm run  
 
 ## To test need Postman
 
 1 create post request
 
-```http://localhost/addUserInfo
+```
+http://localhost/addUserInfo
 
 ```
 
 1.1 body raw data - json format
 
-```{
+```
+{
     "id" : "root",
     "first_name" : "Rodrick",
     "second_name" : "Paterson",
@@ -34,25 +36,29 @@
 
 1.2 test with get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
 2 create get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
 3 create patch request
 
-```http://localhost/updateUserInfo
+```
+http://localhost/updateUserInfo
 
 ```
 
 3.1 body raw data - json format
 
-```{
+```
+{
     "id" : "root",
     "first_name" : "Rodrick",
     "second_name" : "Gach",
@@ -62,18 +68,21 @@
 
 3.2 test with get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
 4 create delete request
 
-```http://localhost/deleteUserInfo/root
+```
+http://localhost/deleteUserInfo/root
 
 ```
 
 4.1 test with get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
