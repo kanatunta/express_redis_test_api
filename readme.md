@@ -4,7 +4,7 @@
 
 ### From Docker repo
 
-1 docker pull kanatunta/rest-redis:latest
+1 docker pull kanatunta/rest-redis:latest  
 2 docker run -d -p 80:3000 kanatunta/rest-redis:latest  
 3 docker container rm kanatunta/rest-redis:latest -f // stop container and remove  
 
