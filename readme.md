@@ -10,21 +10,23 @@
 
 ### From terminal
 
-1 install redis
-2 npm install
-3 npm run
+1 install redis  
+2 npm install  
+3 npm run  
 
 ## To test need Postman
 
 1 create post request
 
-```http://localhost/addUserInfo
+```
+http://localhost/addUserInfo
 
 ```
 
 1.1 body raw data - json format
 
-```{
+```
+{
     "id" : "root",
     "first_name" : "Rodrick",
     "second_name" : "Paterson",
@@ -34,25 +36,29 @@
 
 1.2 test with get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
 2 create get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
 3 create patch request
 
-```http://localhost/updateUserInfo
+```
+http://localhost/updateUserInfo
 
 ```
 
 3.1 body raw data - json format
 
-```{
+```
+{
     "id" : "root",
     "first_name" : "Rodrick",
     "second_name" : "Gach",
@@ -62,7 +68,8 @@
 
 3.2 test with get request
 
-```http://localhost/userInfo/root
+```
+http://localhost/userInfo/root
 
 ```
 
