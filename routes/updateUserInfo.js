@@ -6,7 +6,8 @@ const client = require("../client/client.js");
 
 router.patch("/", function(request, response, next) {
   const id = request.body.id;
-  const obj = client.hgetall(id, (err, obj) => {
+  client.hgetall(id, (err, obj) => {
+    obj = obj || {};
     const first_name = request.body.first_name || obj.first_name;
     const last_name = request.body.last_name || obj.last_name;
     const email = request.body.email || obj.email;
