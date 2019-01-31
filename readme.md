@@ -14,7 +14,7 @@
 2 npm install  
 3 npm run  
 
-## To test need Postman
+## To test need [Postman](https://www.getpostman.com/)
 
 1 create post request
 
